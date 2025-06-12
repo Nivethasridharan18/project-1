@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Glowing Button Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #1a1a1a;
+      margin: 0;
+    }
+
+    .glow-button {
+      padding: 15px 40px;
+      font-size: 18px;
+      color: white;
+      background-color: #00bcd4;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00bcd4;
+      animation: glow 2s infinite ease-in-out, bounce 1s infinite alternate;
+      transition: transform 0.2s;
+    }
+
+    .glow-button:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 15px #00bcd4;
+        background-color: #00bcd4;
+      }
+      50% {
+        box-shadow: 0 0 30px #00fff0;
+        background-color: #00fff0;
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="glow-button">Click Me</button>
+
+</body>
+</html>
